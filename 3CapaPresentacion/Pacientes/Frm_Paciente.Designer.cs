@@ -30,52 +30,194 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Paciente));
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
+            this.PicImagen = new DevExpress.XtraEditors.PictureEdit();
+            this.btn_BuscarImagen = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_QuitarImagen = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_Apellidos = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_Cedula = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_Nombres = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_Direccion = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicImagen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Apellidos.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Cedula.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Nombres.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Direccion.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // checkEdit1
-            // 
-            this.checkEdit1.EditValue = true;
-            this.checkEdit1.Location = new System.Drawing.Point(228, 280);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Caption = "";
-            this.checkEdit1.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
-            this.checkEdit1.Properties.HtmlImages = this.imageCollection1;
-            this.checkEdit1.Properties.ImageIndexChecked = 0;
-            this.checkEdit1.Properties.Images = this.imageCollection1;
-            this.checkEdit1.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
-            this.checkEdit1.Properties.PictureChecked = ((System.Drawing.Image)(resources.GetObject("checkEdit1.Properties.PictureChecked")));
-            this.checkEdit1.Properties.PictureUnchecked = ((System.Drawing.Image)(resources.GetObject("checkEdit1.Properties.PictureUnchecked")));
-            this.checkEdit1.Size = new System.Drawing.Size(36, 36);
-            this.checkEdit1.TabIndex = 0;
             // 
             // imageCollection1
             // 
             this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
             this.imageCollection1.Images.SetKeyName(0, "$_12.jpg");
             // 
+            // PicImagen
+            // 
+            this.PicImagen.Location = new System.Drawing.Point(12, 46);
+            this.PicImagen.Name = "PicImagen";
+            this.PicImagen.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.PicImagen.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.PicImagen.Size = new System.Drawing.Size(173, 160);
+            this.PicImagen.TabIndex = 0;
+            // 
+            // btn_BuscarImagen
+            // 
+            this.btn_BuscarImagen.Image = ((System.Drawing.Image)(resources.GetObject("btn_BuscarImagen.Image")));
+            this.btn_BuscarImagen.Location = new System.Drawing.Point(12, 211);
+            this.btn_BuscarImagen.Name = "btn_BuscarImagen";
+            this.btn_BuscarImagen.Size = new System.Drawing.Size(173, 23);
+            this.btn_BuscarImagen.TabIndex = 4;
+            this.btn_BuscarImagen.Text = "Buscar Imagen";
+            this.btn_BuscarImagen.Click += new System.EventHandler(this.btn_BuscarImagen_Click);
+            // 
+            // btn_QuitarImagen
+            // 
+            this.btn_QuitarImagen.Image = ((System.Drawing.Image)(resources.GetObject("btn_QuitarImagen.Image")));
+            this.btn_QuitarImagen.Location = new System.Drawing.Point(12, 239);
+            this.btn_QuitarImagen.Name = "btn_QuitarImagen";
+            this.btn_QuitarImagen.Size = new System.Drawing.Size(173, 23);
+            this.btn_QuitarImagen.TabIndex = 5;
+            this.btn_QuitarImagen.Text = "Quitar Imagen";
+            this.btn_QuitarImagen.Click += new System.EventHandler(this.btn_QuitarImagen_Click);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(195, 86);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(56, 16);
+            this.labelControl1.TabIndex = 6;
+            this.labelControl1.Text = "Apellidos:";
+            // 
+            // txt_Apellidos
+            // 
+            this.txt_Apellidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Apellidos.Location = new System.Drawing.Point(257, 81);
+            this.txt_Apellidos.Name = "txt_Apellidos";
+            this.txt_Apellidos.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Apellidos.Properties.Appearance.Options.UseFont = true;
+            this.txt_Apellidos.Size = new System.Drawing.Size(496, 22);
+            this.txt_Apellidos.TabIndex = 7;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Location = new System.Drawing.Point(195, 56);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(44, 16);
+            this.labelControl2.TabIndex = 8;
+            this.labelControl2.Text = "Cedula:";
+            // 
+            // txt_Cedula
+            // 
+            this.txt_Cedula.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cedula.Location = new System.Drawing.Point(257, 53);
+            this.txt_Cedula.Name = "txt_Cedula";
+            this.txt_Cedula.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cedula.Properties.Appearance.Options.UseFont = true;
+            this.txt_Cedula.Size = new System.Drawing.Size(223, 22);
+            this.txt_Cedula.TabIndex = 9;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Location = new System.Drawing.Point(195, 113);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(56, 16);
+            this.labelControl3.TabIndex = 10;
+            this.labelControl3.Text = "Nombres:";
+            // 
+            // txt_Nombres
+            // 
+            this.txt_Nombres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Nombres.Location = new System.Drawing.Point(257, 109);
+            this.txt_Nombres.Name = "txt_Nombres";
+            this.txt_Nombres.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Nombres.Properties.Appearance.Options.UseFont = true;
+            this.txt_Nombres.Size = new System.Drawing.Size(496, 22);
+            this.txt_Nombres.TabIndex = 11;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Location = new System.Drawing.Point(195, 138);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(57, 16);
+            this.labelControl4.TabIndex = 12;
+            this.labelControl4.Text = "Direccion:";
+            // 
+            // txt_Direccion
+            // 
+            this.txt_Direccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Direccion.Location = new System.Drawing.Point(257, 135);
+            this.txt_Direccion.Name = "txt_Direccion";
+            this.txt_Direccion.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Direccion.Properties.Appearance.Options.UseFont = true;
+            this.txt_Direccion.Size = new System.Drawing.Size(496, 22);
+            this.txt_Direccion.TabIndex = 13;
+            // 
             // Frm_Paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 499);
-            this.Controls.Add(this.checkEdit1);
+            this.ClientSize = new System.Drawing.Size(764, 499);
+            this.Controls.Add(this.txt_Direccion);
+            this.Controls.Add(this.labelControl4);
+            this.Controls.Add(this.txt_Nombres);
+            this.Controls.Add(this.labelControl3);
+            this.Controls.Add(this.txt_Cedula);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.txt_Apellidos);
+            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.btn_QuitarImagen);
+            this.Controls.Add(this.btn_BuscarImagen);
+            this.Controls.Add(this.PicImagen);
             this.Name = "Frm_Paciente";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pacientes";
             this.Load += new System.EventHandler(this.Frm_Paciente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
+            this.Controls.SetChildIndex(this.PicImagen, 0);
+            this.Controls.SetChildIndex(this.btn_BuscarImagen, 0);
+            this.Controls.SetChildIndex(this.btn_QuitarImagen, 0);
+            this.Controls.SetChildIndex(this.labelControl1, 0);
+            this.Controls.SetChildIndex(this.txt_Apellidos, 0);
+            this.Controls.SetChildIndex(this.labelControl2, 0);
+            this.Controls.SetChildIndex(this.txt_Cedula, 0);
+            this.Controls.SetChildIndex(this.labelControl3, 0);
+            this.Controls.SetChildIndex(this.txt_Nombres, 0);
+            this.Controls.SetChildIndex(this.labelControl4, 0);
+            this.Controls.SetChildIndex(this.txt_Direccion, 0);
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicImagen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Apellidos.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Cedula.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Nombres.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Direccion.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.Utils.ImageCollection imageCollection1;
+        private DevExpress.XtraEditors.PictureEdit PicImagen;
+        private DevExpress.XtraEditors.SimpleButton btn_BuscarImagen;
+        private DevExpress.XtraEditors.SimpleButton btn_QuitarImagen;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit txt_Apellidos;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.TextEdit txt_Cedula;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.TextEdit txt_Nombres;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.TextEdit txt_Direccion;
     }
 }

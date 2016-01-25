@@ -21,6 +21,7 @@ namespace _3CapaPresentacion
         private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             Pacientes.Frm_Paciente form  = new Pacientes.Frm_Paciente();
+            form.ControlBox = true;
             form.MdiParent = this;
             form.Show();
         }

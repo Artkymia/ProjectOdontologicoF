@@ -35,12 +35,16 @@
     <StartupObject>_3CapaPresentacion.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -66,12 +70,30 @@
       <DependentUpon>Frm_Paciente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Programacion\Frm_Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programacion\Frm_Base.Designer.cs">
+      <DependentUpon>Frm_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programacion\Frm_BaseIconBarra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programacion\Frm_BaseIconBarra.Designer.cs">
+      <DependentUpon>Frm_BaseIconBarra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Principal.resx">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pacientes\Frm_Paciente.resx">
       <DependentUpon>Frm_Paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programacion\Frm_Base.resx">
+      <DependentUpon>Frm_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programacion\Frm_BaseIconBarra.resx">
+      <DependentUpon>Frm_BaseIconBarra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

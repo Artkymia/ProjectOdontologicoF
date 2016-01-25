@@ -34,5 +34,53 @@ namespace _2CapaNegocio
                 BaseDatosOracle.desconectar();
             }
         }
+
+
+        public object ConsultaGeneral_ValorUnico(string Campos, string Vista_Tabla, string Consulta, string Orden)
+        {
+            BaseDatosOracle = new _1CapaDatos.BaseDatos();
+            object valor = null;
+            try
+            {
+                BaseDatosOracle.conectar();
+                BaseDatosOracle.comenzarTransaccion();
+                valor = BaseDatosOracle.ejecutarEscalar("select " + Campos + " from " + Vista_Tabla + " " + Consulta + " " + Orden + "");
+                BaseDatosOracle.confirmarTransaccion();
+                return valor;
+            }
+            catch (Exception ex)
+            {
+                BaseDatosOracle.cancelarTransaccion();
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                BaseDatosOracle.desconectar();
+            }
+        }
+
+        public int InsertarImagen(string idCatImagen, string idRefer)
+        {
+            BaseDatosOracle = new _1CapaDatos.BaseDatos();
+            int Valor = 0;
+            try
+            {
+                BaseDatosOracle.conectar();
+                BaseDatosOracle.comenzarTransaccion();
+                BaseDatosOracle.ejecutar("insert into prg_img(id_catimg, id_refer)values('" + idCatImagen + "','" + idRefer + "')");
+                BaseDatosOracle.confirmarTransaccion();
+                return Valor;
+            }
+            catch (Exception ex)
+            {
+                BaseDatosOracle.cancelarTransaccion();
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                BaseDatosOracle.desconectar();
+            }
+        }
+
     }
 }
