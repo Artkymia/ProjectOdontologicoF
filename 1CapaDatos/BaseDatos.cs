@@ -15,6 +15,7 @@ namespace _1CapaDatos
         public string cadenaConexion
         {
             get { return Convert.ToString(ConfigurationManager.ConnectionStrings["Conect"]); }
+
         }
 
 
