@@ -12,7 +12,7 @@ using _2CapaNegocio;
 namespace _3CapaPresentacion.Pacientes
 {
   
-    public partial class Frm_Paciente : DevExpress.XtraEditors.XtraForm
+    public partial class Frm_Paciente : Programacion.Frm_BaseIconBarra
     {
         _2CapaNegocio.CapaGeneral negocio = new _2CapaNegocio.CapaGeneral();
         public Frm_Paciente()
@@ -23,6 +23,16 @@ namespace _3CapaPresentacion.Pacientes
         private void Frm_Paciente_Load(object sender, EventArgs e)
         {
             negocio.ConsultaGeneralOracle("*", "Pacientes", "", "");
+        }
+
+        private void btn_BuscarImagen_Click(object sender, EventArgs e)
+        {
+            PicImagen.LoadImage();
+        }
+
+        private void btn_QuitarImagen_Click(object sender, EventArgs e)
+        {
+            PicImagen.Image = null;
         }
     }
 }

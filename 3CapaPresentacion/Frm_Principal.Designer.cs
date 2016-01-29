@@ -51,7 +51,10 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.defaultLookAndFeel1.EnableBonusSkins = true;
+            this.defaultLookAndFeel1.LookAndFeel.SkinMaskColor = System.Drawing.Color.Aqua;
+            this.defaultLookAndFeel1.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Metropolis Dark";
             // 
             // dockManager1
             // 
@@ -71,7 +74,7 @@
             // 
             // hideContainerLeft
             // 
-            this.hideContainerLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
+            this.hideContainerLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.hideContainerLeft.Controls.Add(this.dockPanel1);
             this.hideContainerLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.hideContainerLeft.Location = new System.Drawing.Point(0, 0);
@@ -85,7 +88,7 @@
             this.dockPanel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dockPanel1.ID = new System.Guid("526e0c29-ec5d-4772-a252-f0ffd332cbd3");
             this.dockPanel1.Image = ((System.Drawing.Image)(resources.GetObject("dockPanel1.Image")));
-            this.dockPanel1.Location = new System.Drawing.Point(-200, 0);
+            this.dockPanel1.Location = new System.Drawing.Point(42, 0);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.OriginalSize = new System.Drawing.Size(200, 200);
             this.dockPanel1.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
@@ -97,9 +100,9 @@
             // dockPanel1_Container
             // 
             this.dockPanel1_Container.Controls.Add(this.navBarControl1);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 25);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 26);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(192, 492);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(192, 491);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navBarControl1
@@ -113,7 +116,7 @@
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 192;
-            this.navBarControl1.Size = new System.Drawing.Size(192, 492);
+            this.navBarControl1.Size = new System.Drawing.Size(192, 491);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -134,6 +137,7 @@
             // documentManager1
             // 
             this.documentManager1.MdiParent = this;
+            this.documentManager1.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.documentManager1.ShowThumbnailsInTaskBar = DevExpress.Utils.DefaultBoolean.False;
             this.documentManager1.View = this.nativeMdiView1;
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
@@ -145,8 +149,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 521);
             this.Controls.Add(this.hideContainerLeft);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.IsMdiContainer = true;
             this.Name = "Frm_Principal";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.hideContainerLeft.ResumeLayout(false);
