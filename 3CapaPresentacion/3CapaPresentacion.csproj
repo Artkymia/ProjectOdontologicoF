@@ -97,6 +97,12 @@
     <Compile Include="Programacion\Frm_BaseIconBarra.Designer.cs">
       <DependentUpon>Frm_BaseIconBarra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Programacion\Frm_Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programacion\Frm_Prueba.Designer.cs">
+      <DependentUpon>Frm_Prueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Principal.resx">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
