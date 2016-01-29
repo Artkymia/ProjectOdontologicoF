@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Paciente));
-            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
+            this.imageCollection1 = new DevExpress.Utils.ImageCollection();
             this.PicImagen = new DevExpress.XtraEditors.PictureEdit();
             this.btn_BuscarImagen = new DevExpress.XtraEditors.SimpleButton();
             this.btn_QuitarImagen = new DevExpress.XtraEditors.SimpleButton();
@@ -46,6 +45,7 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.dateNac = new DevExpress.XtraEditors.DateEdit();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicImagen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Apellidos.Properties)).BeginInit();
@@ -225,11 +225,19 @@
             this.dateNac.Size = new System.Drawing.Size(178, 20);
             this.dateNac.TabIndex = 16;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(257, 191);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(125, 21);
+            this.textBox1.TabIndex = 17;
+            // 
             // Frm_Paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 499);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dateNac);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.textEdit1);
@@ -263,6 +271,7 @@
             this.Controls.SetChildIndex(this.textEdit1, 0);
             this.Controls.SetChildIndex(this.labelControl6, 0);
             this.Controls.SetChildIndex(this.dateNac, 0);
+            this.Controls.SetChildIndex(this.textBox1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicImagen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Apellidos.Properties)).EndInit();
@@ -295,5 +304,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.DateEdit dateNac;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
