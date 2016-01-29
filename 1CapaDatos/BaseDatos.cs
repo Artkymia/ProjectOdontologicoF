@@ -16,8 +16,6 @@ namespace _1CapaDatos
         {
             get { return Convert.ToString(ConfigurationManager.ConnectionStrings["Conect"]); }
 
-
-
         }
 
 
