@@ -26,6 +26,7 @@ namespace _2CapaNegocio
             }
             catch (Exception ex)
             {
+                //dddd
                 BaseDatosOracle.cancelarTransaccion();
                 throw new Exception(ex.Message);
             }

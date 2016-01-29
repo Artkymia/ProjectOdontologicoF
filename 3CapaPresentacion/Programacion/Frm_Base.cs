@@ -696,5 +696,9 @@ namespace _3CapaPresentacion.Programacion
             }
             return -1;
         }
+        public string FechaVb_FechaAccess(DateTime fecha, string FormatoVisual, string FormatoAcess)
+        {
+            return "FORMAT('" + fecha.ToString(FormatoVisual, System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) +"' , \"" + FormatoAcess + "\"" + ")";
+        }
     }
 }

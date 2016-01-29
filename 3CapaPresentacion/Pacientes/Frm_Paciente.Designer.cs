@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Paciente));
-            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
+            this.imageCollection1 = new DevExpress.Utils.ImageCollection();
             this.PicImagen = new DevExpress.XtraEditors.PictureEdit();
             this.btn_BuscarImagen = new DevExpress.XtraEditors.SimpleButton();
             this.btn_QuitarImagen = new DevExpress.XtraEditors.SimpleButton();
@@ -42,12 +41,19 @@
             this.txt_Nombres = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txt_Direccion = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.dateNac = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicImagen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Apellidos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Cedula.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Nombres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Direccion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNac.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNac.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // imageCollection1
@@ -101,8 +107,9 @@
             this.txt_Apellidos.Name = "txt_Apellidos";
             this.txt_Apellidos.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Apellidos.Properties.Appearance.Options.UseFont = true;
+            this.txt_Apellidos.Properties.MaxLength = 50;
             this.txt_Apellidos.Size = new System.Drawing.Size(496, 22);
-            this.txt_Apellidos.TabIndex = 7;
+            this.txt_Apellidos.TabIndex = 1;
             // 
             // labelControl2
             // 
@@ -121,8 +128,11 @@
             this.txt_Cedula.Name = "txt_Cedula";
             this.txt_Cedula.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Cedula.Properties.Appearance.Options.UseFont = true;
+            this.txt_Cedula.Properties.Mask.EditMask = "\\d+";
+            this.txt_Cedula.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_Cedula.Properties.MaxLength = 13;
             this.txt_Cedula.Size = new System.Drawing.Size(223, 22);
-            this.txt_Cedula.TabIndex = 9;
+            this.txt_Cedula.TabIndex = 0;
             // 
             // labelControl3
             // 
@@ -141,8 +151,9 @@
             this.txt_Nombres.Name = "txt_Nombres";
             this.txt_Nombres.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nombres.Properties.Appearance.Options.UseFont = true;
+            this.txt_Nombres.Properties.MaxLength = 50;
             this.txt_Nombres.Size = new System.Drawing.Size(496, 22);
-            this.txt_Nombres.TabIndex = 11;
+            this.txt_Nombres.TabIndex = 2;
             // 
             // labelControl4
             // 
@@ -161,14 +172,67 @@
             this.txt_Direccion.Name = "txt_Direccion";
             this.txt_Direccion.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Direccion.Properties.Appearance.Options.UseFont = true;
+            this.txt_Direccion.Properties.MaxLength = 100;
             this.txt_Direccion.Size = new System.Drawing.Size(496, 22);
-            this.txt_Direccion.TabIndex = 13;
+            this.txt_Direccion.TabIndex = 3;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textEdit1.Location = new System.Drawing.Point(257, 163);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit1.Properties.Appearance.Options.UseFont = true;
+            this.textEdit1.Properties.Mask.EditMask = "\\d+";
+            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textEdit1.Properties.MaxLength = 13;
+            this.textEdit1.Size = new System.Drawing.Size(223, 22);
+            this.textEdit1.TabIndex = 13;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Location = new System.Drawing.Point(195, 166);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(55, 16);
+            this.labelControl5.TabIndex = 14;
+            this.labelControl5.Text = "Telefono:";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Location = new System.Drawing.Point(486, 56);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(83, 16);
+            this.labelControl6.TabIndex = 15;
+            this.labelControl6.Text = "F. Nacimiento:";
+            // 
+            // dateNac
+            // 
+            this.dateNac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateNac.EditValue = null;
+            this.dateNac.Location = new System.Drawing.Point(575, 53);
+            this.dateNac.Name = "dateNac";
+            this.dateNac.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNac.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNac.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dateNac.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.dateNac.Size = new System.Drawing.Size(178, 20);
+            this.dateNac.TabIndex = 16;
             // 
             // Frm_Paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 499);
+            this.Controls.Add(this.dateNac);
+            this.Controls.Add(this.labelControl6);
+            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.txt_Direccion);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.txt_Nombres);
@@ -194,12 +258,19 @@
             this.Controls.SetChildIndex(this.txt_Nombres, 0);
             this.Controls.SetChildIndex(this.labelControl4, 0);
             this.Controls.SetChildIndex(this.txt_Direccion, 0);
+            this.Controls.SetChildIndex(this.labelControl5, 0);
+            this.Controls.SetChildIndex(this.textEdit1, 0);
+            this.Controls.SetChildIndex(this.labelControl6, 0);
+            this.Controls.SetChildIndex(this.dateNac, 0);
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicImagen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Apellidos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Cedula.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Nombres.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Direccion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNac.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNac.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +290,9 @@
         private DevExpress.XtraEditors.TextEdit txt_Nombres;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txt_Direccion;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.DateEdit dateNac;
     }
 }
